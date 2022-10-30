@@ -1,6 +1,6 @@
 import icons from 'url:../../img/icons.svg';
 import { Fraction } from 'fractional';
-
+const recipeContainer = document.querySelector('.recipe');
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
@@ -122,10 +122,11 @@ class RecipeView {
 
       <div class="recipe__ingredients">
       <h2 class="heading--2">Recipe ingredients</h2>
-      <ul class="recipe__ingredient-list">
+    <ul class="recipe__ingredient-list">
       ${this.#data.ingredients.map(this.#generateMarkupIngredinets).join('')}
+      </div>
 
-      <div class="recipe__directions">
+    <div class="recipe__directions">
       <h2 class="heading--2">How to cook it</h2>
       <p class="recipe__directions-text">
         This recipe was carefully designed and tested by
